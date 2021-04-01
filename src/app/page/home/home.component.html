@@ -1,1 +1,15 @@
-<p>home works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-12 d-flex flex-wrap">
+      <div class="col-12 col-md-6 col-lg-3 py-3 quiz__card" *ngFor="let item of quizList$ | async"
+        [routerLink]="'quiz/'+item.id">
+        <div class="card w-100">
+          <div class="card-body">
+            <h4 class="card-title">{{ item.title }}</h4>
+            <p class="card-text">{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,94 @@
-<p>admin works!</p>
+<div class="container">
+  <div class="row d-flex justify-content-end mb-4">
+    <div class="col-12 col-md-6">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <select class="custom-select" [(ngModel)]="filterKey">
+            <option>title</option>
+            <option>description</option>
+          </select>
+        </div>
+        <input type="text" class="form-control filter-search" [(ngModel)]="filterPhrase" placeholder="Search...">
+        <div class="input-group-append">
+          <span class="input-group-text">
+            <i class="fa fa-search"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th (click)="onColumnSelect('title')">Title
+            <i *ngIf="columnKey !== 'title'" class="fa fa-minus-square"></i>
+            <i *ngIf="columnKey === 'title' && direction === 'asc'" class="fa fa-arrow-down"></i>
+            <i *ngIf="columnKey === 'title' && direction === 'dsc'" class="fa fa-arrow-up"></i>
+          </th>
+          <th (click)="onColumnSelect('description')">
+            Description
+            <i *ngIf="columnKey !== 'description'" class="fa fa-minus-square"></i>
+            <i *ngIf="columnKey === 'description' && direction === 'asc'" class="fa fa-arrow-down"></i>
+            <i *ngIf="columnKey === 'description' && direction === 'dsc'" class="fa fa-arrow-up"></i>
+          </th>
+          <th (click)="onColumnSelect('questions')">
+            Question
+            <i *ngIf="columnKey !== 'questions'" class="fa fa-minus-square"></i>
+            <i *ngIf="columnKey === 'questions' && direction === 'asc'" class="fa fa-arrow-down"></i>
+            <i *ngIf="columnKey === 'questions' && direction === 'dsc'" class="fa fa-arrow-up"></i>
+          </th>
+          <th>
+            <button class="btn btn-success" [routerLink]="['/quiz-editor/' + 0]">
+              <i class="fa fa-plus"></i> New Quiz
+            </button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let quiz of quizList$ | async | sorter:direction:columnKey | filter:filterPhrase:filterKey">
+          <td>{{ quiz.title }}</td>
+          <td>{{ quiz.description }}</td>
+          <td>{{ quiz.questions.length }}</td>
+          <td>
+            <div class="btn-group">
+              <button class="btn btn-info" [routerLink]="['/quiz-editor/' + quiz.id]">
+                <i class="fa fa-pencil"></i>
+              </button>
+              <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"
+                (click)="addToDeleteQuiz(quiz)">
+                <i class="fa fa-trash"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure delete this Quiz?
+        <p>{{selectDelQuiz.title}}</p>
+        <p>{{selectDelQuiz.description}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" (click)="deleteQuiz()" data-dismiss="modal">YES</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">NO</button>
+      </div>
+    </div>
+  </div>
+</div>

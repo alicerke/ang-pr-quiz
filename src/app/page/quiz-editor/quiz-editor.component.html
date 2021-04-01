@@ -1,1 +1,78 @@
-<p>quiz-editor works!</p>
+<div class="row">
+  <div *ngIf="quiz$ | async as quiz" class="col-8 offset-2 mt-3">
+    <h2 *ngIf="quiz.id==0">Create a new quiz</h2>
+    <h2 *ngIf="quiz.id!=0">Modify quiz information</h2>
+    <form #quizForm="ngForm" (ngSubmit)="onFormSubmit(quiz)">
+      <input name="id" type="hidden" [(ngModel)]="quiz.id">
+
+      <div class="form-group">
+        <label>Title</label>
+        <input class="form-control" type="text" name="title" pattern=".{8,40}" required [(ngModel)]="quiz.title">
+        <div [hidden]="quizForm.controls.title?.valid || quizForm.controls.title?.pristine" class="error__message">
+          Legalább 8, de maximum 40 karakter megadása kötelező!
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <input class="form-control" type="text" name="description" pattern=".{8,100}" required
+          [(ngModel)]="quiz.description">
+        <div [hidden]="quizForm.controls.description?.valid || quizForm.controls.description?.pristine"
+          class="error__message">
+          Legalább 8, de maximum 100 karakter megadása kötelező!
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Active</label>
+        <select [(ngModel)]="quiz.active" name="active" class="form-control">
+          <option [ngValue]="true">aktív</option>
+          <option [ngValue]="false">inaktív</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Questions</label>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="form-group col-md-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Question</th>
+                <th>Points</th>
+                <th>Active</th>
+                <th>
+                  <button class="btn btn-success" [routerLink]="['/question-editor/' + 0]">
+                    <i class="fa fa-plus"></i> Add new Quest
+                  </button>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let question of questions">
+                <td>{{ question.question }}</td>
+                <td>{{ question.points }}</td>
+                <td>{{ question.active }}</td>
+                <td>
+                  <div class="btn-group">
+                    <button class="btn btn-info" [routerLink]="['/question-editor/' + question.id]">
+                      <i class="fa fa-pencil"></i>
+                    </button>
+                    <button class="btn btn-danger">
+                      <i class="fa fa-trash"></i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block mt-5" [disabled]="quizForm.invalid">
+        <i class="fa fa-save"></i>
+      </button>
+
+    </form>
+  </div>
+</div>

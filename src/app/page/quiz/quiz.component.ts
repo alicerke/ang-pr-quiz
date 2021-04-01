@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Quiz } from 'src/app/model/quiz';
 
 @Component({
   selector: 'app-quiz',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quiz.component.scss']
 })
 export class QuizComponent implements OnInit {
+
 
   constructor() { }
 
