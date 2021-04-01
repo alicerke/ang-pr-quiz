@@ -1,3 +1,4 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
@@ -15,6 +16,7 @@ import { QuizService } from 'src/app/service/quiz.service';
 export class QuizEditorComponent implements OnInit {
 
   questions: Question[] = [];
+  quizID = 0;
 
   quiz$: Observable<Quiz> = this.activatedRoute.params.pipe(
     switchMap( params => {
@@ -50,7 +52,9 @@ export class QuizEditorComponent implements OnInit {
     try {
       if (quiz.id == 0) {
         this.quizService.create(quiz).subscribe(
-          () => this.router.navigate(['/admin'])
+            item => {
+              this.router.navigate(['/question-editor/' + 0 + '/'+ item.id ])
+            }
         );
       }
       else {

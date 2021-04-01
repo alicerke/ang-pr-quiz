@@ -56,33 +56,38 @@
         {
           "id": 2,
           "content": "HyperText Markup Language",
-          "correct": true
+          "correct": false
         },
         {
           "id": 3,
           "content": "HyperText Marking Language",
+          "correct": true
+        },
+        {
+          "id": 4,
+          "content": "D valasz",
           "correct": false
         }
       ],
-      "points": 2,
-      "active": true
+      "points": 20,
+      "active": false
     },
     {
       "id": 2,
       "question": "Használták-e a table elemet fő sitebuild elemként?",
       "answers": [
         {
-          "id": 4,
+          "id": 5,
           "content": "Nem, mert a table strukrútált adatmegjelenítésre szolgál.",
           "correct": false
         },
         {
-          "id": 5,
+          "id": 6,
           "content": "A 2000-es évek elején használták, de a div és a foating leváltotta.",
           "correct": true
         },
         {
-          "id": 6,
+          "id": 7,
           "content": "Mai napig használják.",
           "correct": false
         }
@@ -95,17 +100,17 @@
       "question": "Mit takar a CSS rövidítés?",
       "answers": [
         {
-          "id": 7,
+          "id": 8,
           "content": "Cascading Style Sheets",
           "correct": true
         },
         {
-          "id": 8,
+          "id": 9,
           "content": "Centralized Style Schema",
           "correct": false
         },
         {
-          "id": 9,
+          "id": 10,
           "content": "Cascading Style System",
           "correct": false
         }
@@ -118,17 +123,17 @@
       "question": "Mely css property segítségével tudunk block elemnek vetett árnyékot adni?",
       "answers": [
         {
-          "id": 10,
+          "id": 11,
           "content": "drop-shadow",
           "correct": false
         },
         {
-          "id": 11,
+          "id": 12,
           "content": "box-shadow",
           "correct": true
         },
         {
-          "id": 12,
+          "id": 13,
           "content": "shadow",
           "correct": false
         }

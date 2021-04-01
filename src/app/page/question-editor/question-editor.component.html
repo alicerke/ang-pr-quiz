@@ -1,1 +1,104 @@
-<p>question-editor works!</p>
+<div class="container">
+  <div *ngIf="( question$ | async ) as question">
+    <fieldset class="group-border">
+      <legend *ngIf="question.id == 0" class="group-border">Create a new question</legend>
+      <legend *ngIf="question.id != 0" class="group-border">Modify question details</legend>
+      <form #questionForm="ngForm" (ngSubmit)="onFormSubmit(question)">
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <label class="control-label" for="question">
+                <h6>Question</h6>
+              </label>
+              <input type="text" class="form-control" [(ngModel)]="question.question"
+                placeholder="Write here question..." id="question" name="question" required>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <div class="container border p-4">
+                <h6>Answers</h6>
+                <hr>
+                <div class="form-group d-flex justify-content-center">
+                  <div class="col-12 col-md-11">
+                    <label for="answerA">A - answer</label>
+                    <div class="d-flex flex-wrap">
+                      <input class="form-control col-1" type="checkbox" name="correctA"
+                        [(ngModel)]="question.answers[0].correct">
+                      <input class="form-control col-11" type="text" pattern=".{1,100}" required
+                        placeholder="A - answer" id="answerA" name="answerA" [(ngModel)]="question.answers[0].content">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group d-flex justify-content-center">
+                  <div class="col-12 col-md-11">
+                    <label for="answerB">B - answer</label>
+                    <div class="d-flex flex-wrap">
+                      <input class="form-control col-1" type="checkbox" name="correctB"
+                        [(ngModel)]="question.answers[1].correct">
+                      <input class="form-control col-11" type="text" pattern=".{1,100}" required
+                        placeholder="B - answer" id="answerB" name="answerB" [(ngModel)]="question.answers[1].content">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group d-flex justify-content-center">
+                  <div class="col-12 col-md-11">
+                    <label for="answerC">C - answer</label>
+                    <div class="d-flex flex-wrap">
+                      <input class="form-control col-1" type="checkbox" name="correctC"
+                        [(ngModel)]="question.answers[2].correct">
+                      <input class="form-control col-11" type="text" pattern=".{1,100}" required
+                        placeholder="C - answer" id="answerC" name="answerC" [(ngModel)]="question.answers[2].content">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group d-flex justify-content-center">
+                  <div class="col-12 col-md-11">
+                    <label for="answerD">D - answer</label>
+                    <div class="d-flex flex-wrap">
+                      <input class="form-control col-1" type="checkbox" name="correctD"
+                        [(ngModel)]="question.answers[3].correct">
+                      <input class="form-control col-11" type="text" pattern=".{1,100}" required
+                        placeholder="D - answer" id="answerD" name="answerD" [(ngModel)]="question.answers[3].content">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label class="control-label" for="points">
+                <h6>Points</h6>
+              </label>
+              <input type="number" [(ngModel)]="question.points" class="form-control" placeholder="Any number..."
+                id="points" name="points" required>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label class="control-label" for="active">
+                <h6>Active</h6>
+              </label>
+              <select name="active" id="active" class="form-control" [(ngModel)]="question.active">
+                <option [ngValue]="true">active</option>
+                <option [ngValue]="false">inactive</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary btn-block mt-4" [disabled]="questionForm.invalid">
+              SUBMIT
+            </button>
+          </div>
+        </div>
+      </form>
+    </fieldset>
+  </div>
+</div>
