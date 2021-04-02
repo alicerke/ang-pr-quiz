@@ -1,150 +1,579 @@
 {
   "quiz": [
     {
-      "id": 1,
-      "title": "HTML kérdéssor",
-      "description": "Ebben a kvízben HTML témajú kérdéseket találsz.",
-      "questions": [
-        1,
-        2
-      ],
-      "active": true
-    },
-    {
       "id": 2,
-      "title": "CSS kérdéssor",
-      "description": "Tesztelnéd CSS tudásodat? Válaszd ezt a kérdéssort!",
+      "title": "Filmek",
+      "description": "Általánosságban a filmekről. Lássuk te menyire vagy jártas bennük.",
       "questions": [
         3,
         4,
-        5
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
       ],
       "active": true
     },
     {
       "id": 3,
-      "title": "Javascript kérdéssor",
-      "description": "Mennyire mélyültél el a JS-ben? Tegyünk egy próbát!",
-      "questions": [],
+      "title": "Általános ismeretek",
+      "description": "Általános tudás kvíz Kérdések",
+      "questions": [
+        15,
+        16,
+        17
+      ],
       "active": true
     },
     {
       "id": 4,
-      "title": "Typescript kérdéssor",
-      "description": "Típuskényszerítés megy? Lássuk!",
-      "questions": [],
-      "active": true
-    },
-    {
-      "id": 5,
-      "title": "Angular kérdéssor",
-      "description": "Kíváncsi vagy, mennyi ragadt meg angularból? Töltsd ki ezt a kérdéssort!",
-      "questions": [],
+      "title": "Híres látnivalók",
+      "description": "Nevezetességek és látnivalók",
+      "questions": [
+        18,
+        19,
+        20,
+        21
+      ],
       "active": true
     }
   ],
   "question": [
     {
-      "id": 1,
-      "question": "Mit takar a HTML rövidítés?",
+      "id": 3,
+      "question": "Melyik évben jelent meg először a Keresztapa?",
       "answers": [
         {
+          "id": 0,
+          "content": "1983",
+          "correct": false
+        },
+        {
           "id": 1,
-          "content": "HyperTransport Material Literature",
+          "content": "1975",
           "correct": false
         },
         {
           "id": 2,
-          "content": "HyperText Markup Language",
-          "correct": false
+          "content": "1972",
+          "correct": true
         },
         {
           "id": 3,
-          "content": "HyperText Marking Language",
-          "correct": true
-        },
-        {
-          "id": 4,
-          "content": "D valasz",
+          "content": "1968",
           "correct": false
         }
       ],
-      "points": 20,
-      "active": false
-    },
-    {
-      "id": 2,
-      "question": "Használták-e a table elemet fő sitebuild elemként?",
-      "answers": [
-        {
-          "id": 5,
-          "content": "Nem, mert a table strukrútált adatmegjelenítésre szolgál.",
-          "correct": false
-        },
-        {
-          "id": 6,
-          "content": "A 2000-es évek elején használták, de a div és a foating leváltotta.",
-          "correct": true
-        },
-        {
-          "id": 7,
-          "content": "Mai napig használják.",
-          "correct": false
-        }
-      ],
-      "points": 2,
-      "active": true
-    },
-    {
-      "id": 3,
-      "question": "Mit takar a CSS rövidítés?",
-      "answers": [
-        {
-          "id": 8,
-          "content": "Cascading Style Sheets",
-          "correct": true
-        },
-        {
-          "id": 9,
-          "content": "Centralized Style Schema",
-          "correct": false
-        },
-        {
-          "id": 10,
-          "content": "Cascading Style System",
-          "correct": false
-        }
-      ],
-      "points": 3,
+      "points": 1,
       "active": true
     },
     {
       "id": 4,
-      "question": "Mely css property segítségével tudunk block elemnek vetett árnyékot adni?",
+      "question": "Melyik színész nyerte a legjobb színész Oscar-t a Philadelphia (1993) és a Forrest Gump (1994) filmekért?",
       "answers": [
         {
-          "id": 11,
-          "content": "drop-shadow",
+          "id": 0,
+          "content": "Gary Sinise",
           "correct": false
         },
         {
-          "id": 12,
-          "content": "box-shadow",
+          "id": 1,
+          "content": "Tom Hanks",
           "correct": true
         },
         {
-          "id": 13,
-          "content": "shadow",
+          "id": 2,
+          "content": "Jason Robards",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Denzel Washington",
           "correct": false
         }
       ],
-      "points": 2,
+      "points": 1,
       "active": true
     },
     {
       "id": 5,
-      "question": "Ez is egy css kérdés",
-      "answers": [],
+      "question": "Hány önreferenciás kamerát készített Alfred Hitchcock 1927-1976-as filmjeiben ?",
+      "answers": [
+        {
+          "id": 0,
+          "content": "35",
+          "correct": false
+        },
+        {
+          "id": 1,
+          "content": "39",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "33",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "37",
+          "correct": true
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 6,
+      "question": "Melyik az a 1982-es film, amit a film rajongói nagy örömmel fogadták egy fiatal, apátlan külvárosi fiú és egy másik bolygó elveszett, jóindulatú és otthonú látogatója közötti szerelem ábrázolása miatt?",
+      "answers": [
+        {
+          "id": 0,
+          "content": "IT A földön kívüli",
+          "correct": true
+        },
+        {
+          "id": 1,
+          "content": "A dolog",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "Szárnyas fejvadász",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Űrszekerek II: A Khan bosszúja",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 7,
+      "question": "Melyik színésznő játszotta Mary Poppins-t az 1964-es Mary Poppins filmben?",
+      "answers": [
+        {
+          "id": 0,
+          "content": "Glynis Johns",
+          "correct": false
+        },
+        {
+          "id": 1,
+          "content": "Julie Andrews",
+          "correct": true
+        },
+        {
+          "id": 2,
+          "content": "Karen Dotrice",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Reta Shaw",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 8,
+      "question": "Melyik 1963-as klasszikus filmben jelent meg Charles Bronson?",
+      "answers": [
+        {
+          "id": 0,
+          "content": "A nagy szökés ",
+          "correct": true
+        },
+        {
+          "id": 1,
+          "content": "A hét mesterlövész ",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "Volt egyszer egy Vadnyugat",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Tízezer dolláros megbízás",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 9,
+      "question": "Melyik 1995-ös filmben játszotta Sandra Bullock Angela Bennett karakterét?",
+      "answers": [
+        {
+          "id": 0,
+          "content": "Ernest Hemingway birkózás",
+          "correct": false
+        },
+        {
+          "id": 1,
+          "content": "A háló",
+          "correct": true
+        },
+        {
+          "id": 2,
+          "content": "28 nap",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "A hálózat csapdájában",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 10,
+      "question": "Melyik új-zélandi női rendező rendezte ezeket a filmeket - a Vágásban (2003), A Víznapló (2006) és a Fényes csillag (2009)?",
+      "answers": [
+        {
+          "id": 0,
+          "content": "Lone Scherfig",
+          "correct": false
+        },
+        {
+          "id": 1,
+          "content": "Penny Marshall ",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "Vicky Jenson",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Jane Campion",
+          "correct": true
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 11,
+      "question": "Melyik színész adta hangot a Nemo karakternek a 2003-as Nemo megtalálása című filmben?",
+      "answers": [
+        {
+          "id": 0,
+          "content": "Tom Selleck",
+          "correct": false
+        },
+        {
+          "id": 1,
+          "content": "Jane Campion",
+          "correct": true
+        },
+        {
+          "id": 2,
+          "content": "John C. Reilly",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Jonathan Groff",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 12,
+      "question": "Melyik \"Nagy-Britannia legerőszakosabb foglyának\" titulált rab volt a 2009-es film témája?",
+      "answers": [
+        {
+          "id": 0,
+          "content": "Charles Bronson",
+          "correct": true
+        },
+        {
+          "id": 1,
+          "content": "Lou Taylor Pucci ",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "Christopher Meloni",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Tim D. Janis",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 13,
+      "question": "Amerikai színésznő, aki Tokió alvilági főnökének, O-Ren Ishii-nek alakította a KillBill I. és II.",
+      "answers": [
+        {
+          "id": 0,
+          "content": "Uma Thurman",
+          "correct": false
+        },
+        {
+          "id": 1,
+          "content": "Lucy Liu",
+          "correct": true
+        },
+        {
+          "id": 2,
+          "content": "Daryl Hannah",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Ming Na",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 14,
+      "question": "Melyik filmben csillagolt Hugh Jackman, mint Christian Bale által játszott karakter rivális varázslója?",
+      "answers": [
+        {
+          "id": 0,
+          "content": "A csábítás elmélete",
+          "correct": false
+        },
+        {
+          "id": 1,
+          "content": "A tökéletes trükk",
+          "correct": true
+        },
+        {
+          "id": 2,
+          "content": "Movie 43: Botrányfilm",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "A nagy dobás",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 15,
+      "question": "Melyik évben süllyedt el a Titanic április 15-én az Atlanti-óceánon, a Southamptonból származó első útja során?",
+      "answers": [
+        {
+          "id": 0,
+          "content": "1915",
+          "correct": false
+        },
+        {
+          "id": 1,
+          "content": "1923",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "1912",
+          "correct": true
+        },
+        {
+          "id": 3,
+          "content": "1908",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 16,
+      "question": "Mi a címe az első, 1958-ban készített és kiadott Carry On filmnek?",
+      "answers": [
+        {
+          "id": 0,
+          "content": "Folytassa, taxisofőr!",
+          "correct": false
+        },
+        {
+          "id": 1,
+          "content": "Folytassa, őrmester!",
+          "correct": true
+        },
+        {
+          "id": 2,
+          "content": "Folytassa, doktor!",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Folytassa, Henry!",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 17,
+      "question": "Mi a neve Dél-Korea legnagyobb technológiai vállalatának?",
+      "answers": [
+        {
+          "id": 0,
+          "content": "Huawei",
+          "correct": false
+        },
+        {
+          "id": 1,
+          "content": "Samsung",
+          "correct": true
+        },
+        {
+          "id": 2,
+          "content": "Sinopec",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Hankook Tire",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 18,
+      "question": "Melyik országban található a Giza piramis és a Nagy Szfinx?",
+      "answers": [
+        {
+          "id": 0,
+          "content": "Egyiptom",
+          "correct": true
+        },
+        {
+          "id": 1,
+          "content": "Líbia",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "Szudán",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Kairó",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 19,
+      "question": "Melyik országban található a Kolosszeum?",
+      "answers": [
+        {
+          "id": 0,
+          "content": "Görögország",
+          "correct": false
+        },
+        {
+          "id": 1,
+          "content": "Athén",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "Olaszország",
+          "correct": true
+        },
+        {
+          "id": 3,
+          "content": "Róma",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 20,
+      "question": "Melyik országban található a Angkor Wat?",
+      "answers": [
+        {
+          "id": 0,
+          "content": "Laosz",
+          "correct": false
+        },
+        {
+          "id": 1,
+          "content": "Kambodzsa",
+          "correct": true
+        },
+        {
+          "id": 2,
+          "content": "Vietnam",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Malajzia",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 21,
+      "question": "Melyik országban található a Szabadság-szobor?",
+      "answers": [
+        {
+          "id": 0,
+          "content": "New York",
+          "correct": false
+        },
+        {
+          "id": 1,
+          "content": "Franciaország",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "Montreal",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Amerikai Egyesült Államok",
+          "correct": true
+        }
+      ],
       "points": 1,
       "active": true
     }
